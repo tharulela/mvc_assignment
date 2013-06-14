@@ -1,0 +1,34 @@
+﻿@model MvcApplication1.Areas.ContactDetails.Models.ContactDetails
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<form method="POST">
+  <fieldset>
+    <legend>Contact Details</legend>
+      <br />
+        <fieldset>
+            <legend>Basic Information</legend>
+            @Html.LabelFor(m => m.FirstName): <br>@Html.TextBoxFor(m => m.FirstName)<br>
+            @Html.LabelFor(m => m.LastName): <br>@Html.TextBoxFor(m => m.LastName)<br>
+              @Html.LabelFor(m => m.Email): <br>@Html.TextBoxFor(m => m.Email)<br>
+              @Html.LabelFor(t=>t.HomePhone): <br>@Html.TextBoxFor(t=>t.HomePhone.CountryCode) @Html.TextBoxFor(t => t.HomePhone.AreaCode) @Html.TextBoxFor(t => t.HomePhone.PhoneNumber)<br>
+    @Html.LabelFor(t=>t.CellPhone): <br>@Html.TextBoxFor(t=>t.CellPhone. CountryCode) @Html.TextBoxFor(t => t.CellPhone.AreaCode) @Html.TextBoxFor(t => t.CellPhone.PhoneNumber)<br>
+         @Html.LabelFor(a=>a.HomeAddress.Line1): <br>@Html.TextBoxFor(a=>a.HomeAddress.Line1)<br>
+             @Html.LabelFor(a=>a.HomeAddress.Line2): <br>@Html.TextBoxFor(a=>a.HomeAddress.Line2)<br>
+             @Html.LabelFor(a=>a.HomeAddress.Line3): <br>@Html.TextBoxFor(a=>a.HomeAddress.Line3)<br>
+              @Html.LabelFor(a=>a.HomeAddress.City): <br>@Html.TextBoxFor(a=>a.HomeAddress.City)<br>
+              @Html.LabelFor(a=>a.HomeAddress.Province): <br>@Html.TextBoxFor(a=>a.HomeAddress.Province)<br>
+              @Html.LabelFor(a=>a.HomeAddress.Country): <br>@Html.TextBoxFor(a=>a.HomeAddress.Country)<br>
+              @Html.LabelFor(a=>a.HomeAddress.PostalCode): <br>@Html.TextBoxFor(a=>a.HomeAddress.PostalCode)<br>
+
+
+        </fieldset>
+    </fieldset>
+
+    <input type="submit" name="Submit" value="Create" />
+</form>
